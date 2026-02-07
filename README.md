@@ -1,139 +1,102 @@
-Welcome to the LitQuest SparkHacks2026 backend!
-Description
+# Welcome to the LitQuest SparkHacks2026 Backend!
 
-In an era where social media scrolling often replaces reading, LitQuest changes classic literature
-by transforming timeless stories into gamified visual novels. Designed to make reading accessible to everyone,
-our platform features adaptive vocabulary levels that adjust to the user's reading proficiency. By breaking
-down novels into digestible segments and incorporating comprehension checkpoints, LitQuest engages with a wider
-audience and ensures that classic ideas are available to all readers of any background.
+## Description
 
-What this backend does
+> In an era where social media scrolling often replaces reading, LitQuest changes classic literature 
+> by transforming timeless stories into gamified visual novels. Designed to make reading accessible to everyone, 
+> our platform features adaptive vocabulary levels that adjust to the user's reading proficiency. By breaking 
+> down novels into digestible segments and incorporating comprehension checkpoints, LitQuest engages with a wider 
+> audience and ensures that classic ideas are available to all readers of any background.
 
-Connects to MongoDB
+## What This Backend Does
 
-Serves scene JSON documents to the frontend
+- Connects to a MongoDB database
+- Stores scene data as JSON documents
+- Serves scenes to the frontend through a single API endpoint
+- Supports branching dialogue using choice_point and next_index
 
-Main route used by the game engine:
+## Required Scene JSON Files
 
-GET /api/scenes/:id
+The frontend expects the following scene IDs:
 
-Example: /api/scenes/01-sidewalk-complete
+- 01-sidewalk-complete
+- 03-firehouse-complete
+- 04-OldWomanHouse-complete
 
-Required JSON files
+Each scene JSON must include:
 
-These are the scene documents the frontend expects (same IDs used in CHAPTER_TO_SCENE_ID):
+- scene_id
+- title
+- location
+- next_scene_id
+- content (array)
+- choices (array, if applicable)
 
-01-sidewalk-complete.json
+## Getting Started
 
-03-firehouse-complete.json
+### Install Dependencies
 
-04-OldWomanHouse-complete.json
-
-Each JSON file should include at minimum:
-
-scene_id
-
-title
-
-location
-
-next_scene_id
-
-content (array)
-
-choices (array, if used)
-
-Getting Started
-1) Install dependencies
 npm install
 
-2) Create a .env file
+### Create Environment File
 
-In the backend root, create a file named .env:
+Create a .env file in the backend root directory:
 
-MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
+MONGO_URI=YOUR_MONGODB_CONNECTION_STRING  
 PORT=5000
 
-3) Run the backend
-node server.js
+### Run the Backend
 
+node server.js
 
 You should see:
 
 Backend Live on Port 5000
 
-Importing your scene JSON into MongoDB
-Option A: MongoDB Compass (easy)
+## Import Scene JSON into MongoDB
 
-Open MongoDB Compass
+### Using MongoDB Compass (Recommended)
 
-Connect to your cluster
+1. Open MongoDB Compass
+2. Connect to your cluster
+3. Select your database (example: LitQuestDemo)
+4. Select or create a collection named scenes
+5. Click Import Data
+6. Import each scene JSON file
 
-Choose your database (ex: LitQuestDemo)
-
-Choose your collection (ex: scenes)
-
-Click Import Data
-
-Import your JSON scene files (one at a time, or combined array)
-
-Option B: mongoimport (CLI)
-
-Example:
+### Using mongoimport (CLI)
 
 mongoimport \
   --uri "YOUR_MONGO_URI" \
   --collection scenes \
-  --file 01-sidewalk-complete.json \
-  --jsonArray
+  --file 01-sidewalk-complete.json
 
+Repeat for each scene file.
 
-If your file is a single JSON object (not an array), remove --jsonArray.
+## API Endpoint
 
-API Endpoint
-Fetch a scene
+### Fetch a Scene by ID
+
 GET /api/scenes/:id
-
 
 Example:
 
 GET /api/scenes/01-sidewalk-complete
 
+Returns the full scene JSON used by the game engine.
 
-Returns a full scene document:
+## Backend File Overview
 
-narration/dialogue/action entries in content[]
+### server.js
 
-branching points via choice_point + choices[]
+- Sets up Express
+- Connects to MongoDB using Mongoose
+- Defines a flexible Scene schema (strict: false)
+- Exposes one route:
 
-optional flags via set_flag and requires
+GET /api/scenes/:id
 
-File Outline
+### .env
 
-server.js
-
-Express app
-
-MongoDB connection (Mongoose)
-
-Scene model (strict: false)
-
-Route: GET /api/scenes/:id
-
-.env
-
-MONGO_URI
-
-PORT (optional)
-
-Notes
-
-The frontend decides how to render each content item:
-
-type: "dialogue" shows speaker box + text
-
-type: "choice_point" triggers InteractiveChoice
-
-type: "image" can be rendered if your frontend supports it
-
-Your scene_id must match the frontend request exactly.
+- Stores MongoDB connection string
+- Defines backend port
