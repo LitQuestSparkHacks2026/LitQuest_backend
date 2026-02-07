@@ -2,7 +2,7 @@
   "scene_id": "01-sidewalk-complete",
   "title": "Meeting Clarisse McClellan",
   "location": "Suburban Sidewalk",
-  "next_scene_id": "02-montag-bedroom",
+  "next_scene_id": "03-firehouse-complete",
   "content": [
     { "type": "narrative", "text": "Dry leaves crunch under your boots as you walk down the dark street." },
     { "type": "narrative", "text": "The neighborhood is silent. Every house has its lights turned off." },
