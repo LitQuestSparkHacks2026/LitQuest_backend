@@ -3,26 +3,99 @@
   "title": "The Workplace",
   "location": "Firehouse",
   "next_scene_id": "04-OldWomanHouse-complete",
+
   "content": [
-    { "type": "narrative", "text": "He could feel the firehouse full of glitter and shine and silence, of brass colours, the colours of coins, of gold, of silver" },
-    { "type": "narrative", "text": "The unseen men across the table were sighing on their cards, waiting." },
-    { "type": "narrative", "text": "These men who look steadily into their platinum igniter flames as they light their eternally burning black pipes. " },
-    { "type": "narrative", "text": "They and their charcoal hair and soot-coloured brows and bluish-ash-smeared cheeks where they had shaven close; but their heritage showed." },
-    { "type": "choice_point", "ref_id": "Investigate_Choice" },
-    { "type": "action", "text": "You go up to the paper and it reads:" },
-    { "type": "image", "src": "INSERT_IMAGE"},
-    { "type": "narrative", "text": "Rule 1. Answer the alarm swiftly. Rule 2. Start the fire swiftly. Rule 3. Burn everything. " },
-    { "type": "narrative", "text": "Rule 4. Report back to firehouse immediately. Rule 5. Stand alert for other alarms" }
+    {
+      "type": "narrative",
+      "text": {
+        "beginner": "The firehouse feels bright and silent, full of shining metal.",
+        "intermediate": "He could feel the firehouse full of glitter and shine and silence, of brass colours, the colours of coins, of gold, of silver.",
+        "advanced": "He could feel the firehouse full of glitter and shine and silence, of brass colours, the colours of coins, of gold, of silver."
+      }
+    },
+    {
+      "type": "narrative",
+      "text": {
+        "beginner": "Men sit across the table, quietly waiting and watching.",
+        "intermediate": "The unseen men across the table were sighing on their cards, waiting.",
+        "advanced": "The unseen men across the table were sighing on their cards, waiting."
+      }
+    },
+    {
+      "type": "narrative",
+      "text": {
+        "beginner": "They stare into their flames as they smoke their pipes.",
+        "intermediate": "These men who look steadily into their platinum igniter flames as they light their eternally burning black pipes.",
+        "advanced": "These men who look steadily into their platinum igniter flames as they light their eternally burning black pipes."
+      }
+    },
+    {
+      "type": "narrative",
+      "text": {
+        "beginner": "Their hair and faces are dark with ash and soot.",
+        "intermediate": "They and their charcoal hair and soot-coloured brows and bluish-ash-smeared cheeks where they had shaven close; but their heritage showed.",
+        "advanced": "They and their charcoal hair and soot-coloured brows and bluish-ash-smeared cheeks where they had shaven close; but their heritage showed."
+      }
+    },
+
+    {
+      "type": "choice_point",
+      "ref_id": "Investigate_Choice"
+    },
+
+    {
+      "type": "action",
+      "text": {
+        "beginner": "You walk over to the paper and read it.",
+        "intermediate": "You go up to the paper and it reads:",
+        "advanced": "You go up to the paper and it reads:"
+      }
+    },
+
+    {
+      "type": "narrative",
+      "text": {
+        "beginner": "Rule 1: Answer alarms quickly. Rule 2: Start fires fast. Rule 3: Burn everything.",
+        "intermediate": "Rule 1. Answer the alarm swiftly. Rule 2. Start the fire swiftly. Rule 3. Burn everything.",
+        "advanced": "Rule 1. Answer the alarm swiftly. Rule 2. Start the fire swiftly. Rule 3. Burn everything."
+      }
+    },
+    {
+      "type": "narrative",
+      "text": {
+        "beginner": "Rule 4: Return right away. Rule 5: Be ready for more alarms.",
+        "intermediate": "Rule 4. Report back to firehouse immediately. Rule 5. Stand alert for other alarms.",
+        "advanced": "Rule 4. Report back to firehouse immediately. Rule 5. Stand alert for other alarms."
+      }
+    }
   ],
+
   "choices": [
     {
-     "id": "Investigate_Choice",
+      "id": "Investigate_Choice",
+      "choice_prompt": {
+        "beginner": "What do you do?",
+        "intermediate": "What do you do?",
+        "advanced": "What do you do?"
+      },
       "options": [
-        { "text": "Investigate the Paper", "next_index": 12},
-        { "text": "Go down the Fireman Pole"}
+        {
+          "text": {
+            "beginner": "Investigate the paper.",
+            "intermediate": "Investigate the paper.",
+            "advanced": "Investigate the paper."
+          },
+          "next_index": 12
+        },
+        {
+          "text": {
+            "beginner": "Go down the fireman pole.",
+            "intermediate": "Go down the fireman pole.",
+            "advanced": "Go down the fireman pole."
+          },
+          "next_index": 12
+        }
       ]
-
     }
-
   ]
 }
