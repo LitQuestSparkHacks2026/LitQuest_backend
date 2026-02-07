@@ -33,40 +33,42 @@
     { "type": "action", "text": "The woman knelt among the books, touching the drenched leather and cardboard while her eyes accused you.", "requires": { "took_book": false}},
     { "type": "action", "text": "The woman knelt among the books, touching the drenched leather and cardboard while her eyes accused you.", "requires": { "took_book": true}},
     { "type": "dialogue", "speaker": "Old Woman", "text": "You can't ever have my books." },
-    { "type": "dialogue", "speaker": "Captain Beatty", "text": "" },
-    
-    { "type": "dialogue", "speaker": "Montag", "text": "How oddly you say that." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "I'd—I'd have known it with my eyes shut. The smell of kerosene..." },
-    { "type": "dialogue", "speaker": "Montag", "text": "My wife always complains. You never wash it off completely. Kerosene is nothing but perfume to me." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "Does it seem like that, really?" },
-    { "type": "dialogue", "speaker": "Montag", "text": "Of course. Why not?" },
-    { "type": "action", "text": "She turns toward the houses. You find yourself walking beside her." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "I'm Clarisse McClellan. I'm seventeen and I'm crazy. Isn't this a nice night to walk?" },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "I like to smell things and look at things, and sometimes stay up all night to watch the sun rise." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "Do you ever read any of the books you burn?" },
-    { "type": "dialogue", "speaker": "Montag", "text": "That's against the law! Monday burn Millay, Wednesday Whitman, Friday Faulkner. That's the slogan." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "Is it true that long ago firemen put fires out instead of starting them?" },
-    { "type": "choice_point", "ref_id": "history_choice" },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "Strange. I heard once that houses used to burn by accident and they needed firemen to stop the flames." },
-    { "type": "dialogue", "speaker": "Montag", "text": "Why are you laughing?" },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "I don't know. You laugh when I haven't been funny and you answer right off. You never stop to think." },
-    { "type": "action", "text": "You stop walking. You feel insulted, but you aren't sure why." },
-    { "type": "dialogue", "speaker": "Montag", "text": "You are an odd one. Haven't you any respect?" },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "I don't mean to be insulting. I just love to watch people too much, I guess." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "Have you ever watched the jet cars racing? I think drivers don't know what grass is, because they never see it slowly." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "If you showed a driver a green blur, he'd say: 'That's grass!' A pink blur? 'A rose-garden!'" },
-    { "type": "dialogue", "speaker": "Montag", "text": "You think too many things." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "Did you know billboards used to be only twenty feet long? Now they are two hundred feet because cars rush by so fast." },
-    { "type": "dialogue", "speaker": "Montag", "text": "I didn't know that!" },
-    { "type": "action", "text": "You laugh abruptly. Then you realize you don't know if she's right." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "Bet I know something else. There's dew on the grass in the morning. And there's a man in the moon." },
-    { "type": "action", "text": "She stops at her front door. The porch light is the only one on in the whole street." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "Good night! ...Wait." },
-    { "type": "action", "text": "She turns back to look at you with wonder and curiosity." },
-    { "type": "dialogue", "speaker": "Clarisse", "text": "Are you happy?" },
-    { "type": "choice_point", "ref_id": "happy_choice" },
-    { "type": "action", "text": "But she is already gone—running in the moonlight. Her front door shuts gently." },
-    { "type": "narrative", "text": "Happy! Of all the nonsense. You stand alone in the cold night, staring at her door." }
+    { "type": "dialogue", "speaker": "Captain Beatty", "text": "You know the law. Where's your common sense? None of these books agree with each other." },
+    { "type": "dialogue", "speaker": "Captain Beatty", "text": "You've been locked up here for years with a regular damned Tower of Babel. The people in those books never lived." },
+    { "type": "action", "text": "She shook her head." },
+    { "type": "dialogue", "speaker": "Captain Beatty", "text": "The whole house is going up." },
+    { "type": "action", "text": "He glances at you, standing near the woman"},
+    { "type": "dialogue", "speaker": "Captain Beatty", "text": "You're not leaving her here?" },
+    { "type": "choice_point", "ref_id": "Response_Choice" },
+    { "type": "dialogue", "speaker": "Captain Beatty", "text": "Force her, then!" },
+    { "type": "choice_point", "ref_id": "Leave_Choice1" },
+    { "type": "action", "text": "You place your hand on the woman's elbow"},
+    { "type": "dialogue", "speaker": "Montag", "text": "You can come with me" },
+    { "type": "dialogue", "speaker": "Old Woman", "text": "No. Thank you, anyway." },
+    { "type": "dialogue", "speaker": "Captain Beatty", "text": "I'm counting to ten... One. Two." },
+    { "type": "choice_point", "ref_id": "Leave_Choice2" },
+    { "type": "dialogue", "speaker": "Old Woman", "text": "Go on." },
+    { "type": "dialogue", "speaker": "Captain Beatty", "text": "Three. Four." },
+    { "type": "choice_point", "ref_id": "Leave_Choice3" },
+    { "type": "dialogue", "speaker": "Old Woman", "text": "Quietly 'I want to stay here'" },
+    { "type": "dialogue", "speaker": "Captain Beatty", "text": "Five. Six." },
+    { "type": "dialogue", "speaker": "Old Woman", "text": "You can stop counting" },
+    { "type": "action", "text": "She opens her fingers of one hand..."},
+    { "type": "action", "text": "Revealing an ordinary kitchen match"},
+    { "type": "action", "text": "In an instant, the other men along with your Captain flee from the house, leaving you alone with the woman." },
+    { "type": "action", "text": "Her hand twitches on the single matchstick." },
+    { "type": "dialogue", "speaker": "Old Woman", "text": "Go on" },
+    { "type": "choice_point", "ref_id": "Leave_Choice4" },
+    { "type": "action", "text": "You back away out of the door, after your Captain, where the path of kerosene lay like the track of an evil snail." },
+    { "type": "action", "text": "You see the woman still standing there" },
+    { "type": "choice_point", "ref_id": "Save_Choice" },
+    { "type": "action", "text": "You put out the spark and there's a moment of silence", "requires": {"Extinguish": true }}
+    { "type": "narrative", "text": "Scriiiiitch…", "requires": {"Extinguish": true }}
+    { "type": "action", "text": "A kitchen match is struck against the railing."}
+    { "type": "narrative", "text": "People ran out of houses all down the street. Nobody said anything on the way back to the firehouse", "requires" : { "took_book": true}}
+    { "type": "narrative", "text": "People ran out of houses all down the street. You see a single survivor of the massacre", "requires" : { "took_book": false}}
+    { "type": "action", "text": "You pick up the survivor and pocket it", "requires" : { "took_book": false}}
+    { "type": "narrative", "text": "On the way back to the firehouse, the silence was deafening", "requires" : { "took_book": false}}
   ],
   "choices": [
     {
@@ -78,9 +80,51 @@
     {
       "id": "TakeBook_Choice",
       "options": [
-        { "text": "Take the book", "next_index": 27, "set_flag": { "took_book": true}},
-        { "text": "Leave the book", "next_index": 37, "set_flag": { "took_book": false }},
+        { "text": "Take the book", "next_index": 27, "set_flag": { "took_book": true }},
+        { "text": "Leave the book", "next_index": 28, "set_flag": { "took_book": false }},
       ]
     }
+    {
+      "id": "Response_Choice",
+      "options": [
+        { "text": "She won't come", "next_index": 43},
+        { "text": "There's no budging with this woman", "next_index": 43},
+      ]
+    }
+    {
+      "id": "Leave_Choice1",
+      "options": [
+        { "text": "Bring her", "next_index": 45},
+        { "text": "Leave her", "next_index": 62},
+      ]
+    }
+    {
+      "id": "Leave_Choice2",
+      "options": [
+        { "text": "Please", "next_index": 50},
+        { "text": "Leave her", "next_index": 62},
+      ]
+    }
+    {
+      "id": "Leave_Choice3",
+      "options": [
+        { "text": "Come on!", "next_index": 53},
+        { "text": "Leave her", "next_index": 62},
+      ]
+    }
+    {
+      "id": "Leave_Choice4",
+      "options": [
+        { "text": "Leave", "next_index": 62},
+      ]
+    }
+    {
+      "id": "Save_Choice",
+      "options": [
+        { "text": "Put out the spark", "next_index": 65, "set-flag": { "Extinguish": true }},
+        { "text": "...", "next_index": 67}
+      ]
+    }
+    
   ]
 }
