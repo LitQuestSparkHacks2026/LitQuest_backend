@@ -1,0 +1,65 @@
+{
+  "scene_id": "01-sidewalk-complete",
+  "title": "Meeting Clarisse McClellan",
+  "location": "Suburban Sidewalk",
+  "next_scene_id": "02-montag-bedroom",
+  "content": [
+    { "type": "narrative", "text": "Dry leaves crunch under your boots as you walk down the dark street." },
+    { "type": "narrative", "text": "The neighborhood is silent. Every house has its lights turned off." },
+    { "type": "narrative", "text": "You can still smell the strong scent of kerosene on your uniform." },
+    { "type": "narrative", "text": "You turn a corner and stop. A girl is standing in the moonlight in a white dress." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "Of course, you’re a new neighbor, aren’t you?" },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "And you must be... the fireman." },
+    { "type": "action", "text": "She looks at the orange salamander on your arm and the 451 on your helmet." },
+    { "type": "dialogue", "speaker": "Montag", "text": "How oddly you say that." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "I'd—I'd have known it with my eyes shut. The smell of kerosene..." },
+    { "type": "dialogue", "speaker": "Montag", "text": "My wife always complains. You never wash it off completely. Kerosene is nothing but perfume to me." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "Does it seem like that, really?" },
+    { "type": "dialogue", "speaker": "Montag", "text": "Of course. Why not?" },
+    { "type": "action", "text": "She turns toward the houses. You find yourself walking beside her." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "I'm Clarisse McClellan. I'm seventeen and I'm crazy. Isn't this a nice night to walk?" },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "I like to smell things and look at things, and sometimes stay up all night to watch the sun rise." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "Do you ever read any of the books you burn?" },
+    { "type": "dialogue", "speaker": "Montag", "text": "That's against the law! Monday burn Millay, Wednesday Whitman, Friday Faulkner. That's the slogan." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "Is it true that long ago firemen put fires out instead of starting them?" },
+    { "type": "choice_point", "ref_id": "history_choice" },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "Strange. I heard once that houses used to burn by accident and they needed firemen to stop the flames." },
+    { "type": "dialogue", "speaker": "Montag", "text": "Why are you laughing?" },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "I don't know. You laugh when I haven't been funny and you answer right off. You never stop to think." },
+    { "type": "action", "text": "You stop walking. You feel insulted, but you aren't sure why." },
+    { "type": "dialogue", "speaker": "Montag", "text": "You are an odd one. Haven't you any respect?" },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "I don't mean to be insulting. I just love to watch people too much, I guess." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "Have you ever watched the jet cars racing? I think drivers don't know what grass is, because they never see it slowly." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "If you showed a driver a green blur, he'd say: 'That's grass!' A pink blur? 'A rose-garden!'" },
+    { "type": "dialogue", "speaker": "Montag", "text": "You think too many things." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "Did you know billboards used to be only twenty feet long? Now they are two hundred feet because cars rush by so fast." },
+    { "type": "dialogue", "speaker": "Montag", "text": "I didn't know that!" },
+    { "type": "action", "text": "You laugh abruptly. Then you realize you don't know if she's right." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "Bet I know something else. There's dew on the grass in the morning. And there's a man in the moon." },
+    { "type": "action", "text": "She stops at her front door. The porch light is the only one on in the whole street." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "Good night! ...Wait." },
+    { "type": "action", "text": "She turns back to look at you with wonder and curiosity." },
+    { "type": "dialogue", "speaker": "Clarisse", "text": "Are you happy?" },
+    { "type": "choice_point", "ref_id": "happy_choice" },
+    { "type": "action", "text": "But she is already gone—running in the moonlight. Her front door shuts gently." },
+    { "type": "narrative", "text": "Happy! Of all the nonsense. You stand alone in the cold night, staring at her door." }
+  ],
+  "choices": [
+    {
+      "id": "history_choice",
+      "options": [
+        { "text": "No. Houses have always been fireproof.", "next_index": 19 },
+        { "text": "That sounds impossible. Why save dangerous books?", "next_index": 19 },
+        { "text": "I've heard that too... but we don't talk about it.", "next_index": 19 }
+      ]
+    },
+    {
+      "id": "happy_choice",
+      "options": [
+        { "text": "“Am I what?”", "next_index": 37 },
+        { "text": "“What do you mean? Of course I am.”", "next_index": 37 },
+        { "text": "“...” (Remain silent)", "next_index": 37 }
+      ]
+    }
+  ]
+}
