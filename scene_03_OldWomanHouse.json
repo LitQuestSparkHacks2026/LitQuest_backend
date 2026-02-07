@@ -68,7 +68,7 @@
     { "type": "narrative", "text": "People ran out of houses all down the street. Nobody said anything on the way back to the firehouse", "requires" : { "took_book": true}},
     { "type": "narrative", "text": "People ran out of houses all down the street. You see a single survivor of the massacre", "requires" : { "took_book": false}},
     { "type": "action", "text": "You pick up the survivor and pocket it", "requires" : { "took_book": false}},
-    { "type": "narrative", "text": "On the way back to the firehouse, the silence was deafening", "requires" : { "took_book": false}},
+    { "type": "narrative", "text": "On the way back to the firehouse, the silence was deafening", "requires" : { "took_book": false}}
   ],
   "choices": [
     {
@@ -115,7 +115,7 @@
     {
       "id": "Leave_Choice4",
       "options": [
-        { "text": "Leave", "next_index": 62},
+        { "text": "Leave", "next_index": 62}
       ]
     },
     {
