@@ -19,5 +19,5 @@ app.get('/api/scenes/:id', async (req, res) => {
   const scene = await Scene.findOne({ scene_id: req.params.id });
   res.send(scene);
 });
-
-app.listen(5000, () => console.log("Backend Live on Port 5000"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, "0.0.0.0", () => console.log(`Backend Live on Port ${PORT}`));
