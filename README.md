@@ -1,46 +1,30 @@
-# SparkHacks 2026 Backend
-
-Simple Express + MongoDB backend for LitQuest.
-
-This server only does one thing:
-**return a story scene from MongoDB by `scene_id`.**
-
----
-
-## How to run
-
-1. Install dependencies
-npm install
-
-
-2. Create a `.env` file
-PORT=5000
-MONGO_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/LitQuestDemo
-
-
-3. Start the server
-node server.js
-
-
-You should see:
-Backend Live on Port 5001
-
-
----
-
-## API
-
-Get a scene:
-GET /api/scenes/:id
-
-
-Example:
-http://localhost:5000/api/scenes/01-sidewalk-complete
-
-
 Returns the scene JSON stored in MongoDB.
-- No validation
-- No game logic
-- Frontend controls all branching using `next_index`
 
-Built for fast iteration at SparkHacks 2026.
+---
+
+## Scene JSON Format
+
+Scenes are stored as **raw JSON documents** in MongoDB.
+
+Each scene should include:
+- `scene_id` (string)
+- `title`
+- `location`
+- `next_scene_id`
+- `content[]`
+- `choices[]`
+
+Example scene files used in this project:
+- `01-sidewalk-complete.json`
+- `03-firehouse-complete.json`
+- `04-OldWomanHouse-complete.json`
+
+These JSON files should be **inserted directly into MongoDB** (one document per scene).
+
+The frontend handles:
+- dialogue progression
+- branching via `next_index`
+- difficulty levels (`beginner`, `intermediate`, `advanced`)
+
+The backend does **not** process game logic.
+
